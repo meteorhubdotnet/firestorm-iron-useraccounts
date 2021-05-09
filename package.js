@@ -1,31 +1,25 @@
-// Package metadata for Meteor.js web platform (https://www.meteor.com/)
-// This file is defined within the Meteor documentation at
-//
-//   http://docs.meteor.com/#/full/packagejs
-//
-// and it is needed to define a Meteor package
 'use strict';
 
 Package.describe({
-  name: 'useraccounts:iron-routing',
-  summary: 'UserAccounts package providing routes configuration capability via iron:router.',
-  version: '1.14.2',
-  git: 'https://github.com/meteor-useraccounts/iron-routing.git'
+  name: 'meteorhubdotnet:firestorm-iron-useraccounts',
+  summary: 'Fork of useraccounts:iron-routing for Firestorm',
+  version: '1.0.0',
+  git: 'https://github.com/meteorhubdotnet/firestorm-iron-useraccounts'
 });
 
 Package.onUse(function(api) {
-  api.versionsFrom('METEOR@1.0.3');
+  api.versionsFrom('METEOR@2.2');
 
   api.use([
     'check',
-    'iron:router',
+    'meteorhubdotnet:firestorm-iron-router',
     'underscore',
-    'useraccounts:core',
+    'meteorhubdotnet:firestorm-useraccounts-core',
   ], ['client', 'server']);
 
   api.imply([
-    'useraccounts:core@1.14.2',
-    'iron:router@1.0.9',
+    'meteorhubdotnet:firestorm-useraccounts-core',
+    'meteorhubdotnet:firestorm-iron-router',
   ], ['client', 'server']);
 
   api.addFiles([
