@@ -3,18 +3,18 @@
 Package.describe({
   name: 'meteorhubdotnet:firestorm-iron-useraccounts',
   summary: 'Fork of useraccounts:iron-routing for Firestorm',
-  version: '1.0.10',
+  version: '1.0.15',
   git: 'https://github.com/meteorhubdotnet/firestorm-iron-useraccounts'
 });
 
 Package.onUse(function(api) {
-  api.versionsFrom('METEOR@2.7.3');
+  api.versionsFrom('METEOR@2.11.0');
 
   api.use([
     'check',
-    'meteorhubdotnet:firestorm-iron-router@1.0.10',
+    'meteorhubdotnet:firestorm-iron-router@1.0.15',
     'underscore',
-    'meteorhubdotnet:firestorm-useraccounts-core@1.0.10',
+    'meteorhubdotnet:firestorm-useraccounts-core@1.0.15',
   ], ['client', 'server']);
 
   api.imply([
